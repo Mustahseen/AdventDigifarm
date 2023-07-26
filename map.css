@@ -1,0 +1,98 @@
+.container {
+  max-width: 800px;
+  margin: 0% 40%;
+  text-align: center;
+  top: 0;
+  right: 0;
+}
+
+#map {
+  height: 500px;
+  width: 800px;
+  margin-top: 50px;
+  border: #434242;
+  border-radius: 3%;
+  box-shadow: 0 2em 5em rgba(0,0,0,0.5);
+}
+
+/* "layers": [
+{
+  "id": "water",
+  "source": "mapbox-streets",
+  "source-layer": "water",
+  "type": "fill",
+  "paint": {
+    "fill-color": "#00ffff"
+  }
+}
+] */
+
+#menu {
+  position: absolute;
+  width: 800px;
+  background: transparent;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  .mapboxgl-popup {
+      max-width: 400px;
+      /* font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; */
+      border-radius: 30px;
+      border-color: rgb(6, 4, 0);
+
+  }
+  .mapboxgl-popup-close-button {
+      /* display: none; */
+      color: #efefef;
+      border-color: none;
+    }
+    
+    .mapboxgl-popup-content {
+      font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+      padding: 10px;
+      width: 200px;
+      background: #003ef89e;
+      color: #fff;
+      box-shadow: 3px 3px 3px #434242;
+      /* font-family: 'Oswald'; */
+      border-radius: 6px 6px 6px 6px;
+      /* border-radius: 30px;
+      border-color: orange; */
+    }
+
+    .mapboxgl-popup-content h3 {
+      /* background: #4969c9d3;
+      color: #fff; */
+      color: antiquewhite;
+      margin: auto;
+      padding: auto;
+      padding: 10px;
+      border-radius: 6px 6px 6px 6px;
+      font-weight: 700;
+      /* margin-top: -15px; */
+    }
+    
+    .mapboxgl-popup-content h4 {
+      margin: 0;
+      padding: 10px;
+      font-weight: 400;
+      color: aliceblue;
+    }
+
+    .mapboxgl-popup-content p {
+      color: antiquewhite;
+      text-align: center;
+    }
+
+    .mapboxgl-popup-content div {
+      padding: 10px;
+    }
+    
+    .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+      margin-top: 15px;
+    }
+    
+    .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+      border-bottom-color: #c94949;
+    }

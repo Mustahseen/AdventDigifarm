@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="home.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- <link rel="stylesheet" href="map.css"> -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <h1><span id="user" class="message">Hello, < email-id ></Email-id></span></h1>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">Database</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="options">
+                        <li>
+                            <a href="#">
+                                <span class="material-icons">search</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="notification">
+                                <span class="material-icons">notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./icons8-administrator-male-94.png" alt="user" class="profile-img" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <span class="material-icons">segment</span>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="sidebar">
+        <div class="container">
+            <h3 class="title">Menu</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">
+                            home
+                        </span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">
+                            favorite
+                        </span>
+                        <span>Favorites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">
+                            lock
+                        </span>
+                        <span>Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">
+                            help
+                        </span>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">
+                            tune
+                        </span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="note">
+                <h1>What's New</h1>
+                <p>
+                    Stay notified with the latest updates and bug fixes in this updated ADF 1.1.2
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="sidebar-footer">
+                <p>Copyright &copy; 2023 Advent Innovations, LLC | All Rights Reserved</p>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <!-- // Current Weather Info -->
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Enter City Name" spellcheck="false">
+                <button><img src="./icons/search.png"></button>
+            </div>
+            <div class="current-info">
+                <div class="weather-container">
+                    <img src="./icons/animated/cloudy-day-1.svg" class="icon">
+                    <h1 class="degree">25&#176;</h1>
+                    <h2 class="weather-status">Partly Cloudy</h2>
+                    <h5 class="city">Ridge Springs, SC</h5>
+                    <!-- <div class="time" id="time"><span id="am-pm">PM</span></div>
+                    <div class="date" id="date"></div> -->
+                </div>
+                <div class="date-container">
+                    <div class="others" id="current-weather-items">
+                        <div class="column">
+                            <img src="./icons/humidity.png" class="other-icon">
+                            <div>
+                                <p class="humidity">50%</p>
+                                <!-- <p>Humidity</p> -->
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="./icons/wind.png" class="other-icon">
+                            <div>
+                                <p class="wind">15 m/h</p>
+                                <!-- <p>Wind Speed</p> -->
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="./icons/clouds.png" class="other-icon">
+                            <div>
+                                <p class="cloud">50%</p>
+                                <!-- <p>Cloud</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sun">
+                    <div class="sun-others">
+                        <div class="column">
+                            <img src="./icons/sunrise.png" class="sun-icon">
+                            <div>
+                                <p class="sunrise">6:50 AM</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="./icons/sunset.png" class="sun-icon">
+                            <div>
+                                <p class="sunset">7:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="soil">
+                    <div class="soil-others">
+                        <div class="column">
+                            <img src="./icons/sunrise.png" class="sun-icon">
+                            <div>
+                                <p class="sunrise">6:50 AM</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="./icons/sunset.png" class="sun-icon">
+                            <div>
+                                <p class="sunset">7:30 PM</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="./icons/sunset.png" class="sun-icon">
+                            <div>
+                                <p class="sunset">7:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="hourly-forecast" id="hourly-forecast">
+                <div class="weather-forecast-item">
+                    <div class="hour">2PM</div>
+                    <img
+                        src="https://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png"
+                        alt="weather icon"
+                        class="w-icon"
+                    />
+                    <div class="others">
+                        <div class="temp">${hour.main.temp}&#176; F</div>
+                        <div class="temp">Feels like - ${hour.main.feels_like}&#176; F</div>
+                        <div class="temp">Clouds - ${hour.clouds.all}%</div>
+                        <div class="temp">Humidity - ${hour.main.humidity}%</div>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+      
+        <div class="card ndvivalues">
+            <li>
+                <h2>Normalized difference vegetation index (NDVI)</h2>
+                <span>Monthly</span>
+            </li>
+            <li>
+                <h4>October</h4>
+                <span>0.12</span>
+            </li>
+            <li>
+                <h4>December</h4>
+                <span>0.41</span>
+            </li>
+            <li>
+                <h4>January</h4>
+                <span>0.35</span>
+            </li>
+            <li>
+                <h4>February</h4>
+                <span>0.04</span>
+            </li>
+            <li>
+                <h4>March</h4>
+                <span>0.06</span>
+            </li>
+            <li>
+                <h4>April</h4>
+                <span>0.30</span>
+            </li>
+            <li>
+                <h4>August</h4>
+                <span>0.19</span>
+            </li>
+        </div>
+
+        <div class="card">
+            <div class="goals">
+                <div class="card goal">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <div>
+                        <div class="goal-title">
+                            <h4>EVI</h4>
+                            <h4>37.83</h4>
+                        </div>
+                        <small>The enhanced vegetation index is an 'optimized' vegetation index designed to enhance the vegetation signal with improved sensitivity.</small>
+                    </div>
+                </div>
+            
+                <div class="panel goal">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <div>
+                        <div class="goal-title">
+                            <h4>EVI2</h4>
+                            <h4>0.2</h4>
+                        </div>
+                        <small>Two-Band Enhanced vegetation index is useful for assessing the biophysical properties of the land surface, and characterizing vegetation phenology.</small>
+                    </div>
+                </div>
+                <div class="panel goal">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <div>
+                        <div class="goal-title">
+                            <h4>NRI</h4>
+                            <h4>-0.14</h4>
+                        </div>
+                        <small>The National Resources Inventory is a periodic assessment of the status and changing conditions of the soil, water, and related resources on private land conducted by USDA’s Natural Resources Conservation Service.</small>
+                    </div>
+                </div>
+                <div class="panel goal">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <div>
+                        <div class="goal-title">
+                            <h4>DSWI</h4>
+                            <h4>1.61</h4>
+                        </div>
+                        <small>Disease Stress Water Index sensitive to stress due to water shortage and plant damage.</small>
+                    </div>
+                </div>
+                <div class="panel goal">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <div>
+                        <div class="goal-title">
+                            <h4>NDWI</h4>
+                            <h4>0.39</h4>
+                        </div>
+                        <small>The Normalized Difference Water Index (NDWI) is a remote sensing derived index estimating the leaf water content at canopy level.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="sales">
+                <div>
+                    <h4>Current Soil Data</h4>
+                    <h1>Surface Temperature: <span id="surfacetemp"> &deg;C </span> <br> 
+                        Temperature below surface (10 inch): <span id="belowsurfacetemp"> &deg;C </span> <br>
+                        Soil Moisture: <span id="moisture"> &deg;C </span> 
+                    </h1>
+                    <!-- <small>Any Random Text if needed</small> -->
+                </div>
+                <div>
+                    <h4>Current Weather</h4>
+                    <h1>
+                        Temperature: <span id="weathercurrent"></span>°F <br> 
+                        Description: <span id="weatherdescrmain"></span> <br> 
+                        Temperature (feels like): <span id="feelslikecurrent"></span> °F <br>
+                        Wind Speed: <span id="windspeed"></span> m/s <br>
+                    </h1>
+                    <img src="https://openweathermap.org/img/w/${icon}.png" id="icon"><span id="icon"></span>
+                    <!-- <small>Any Random Text if needed</small> -->
+                </div>
+                <div>
+                    <h4>Rain Forecast</h4>
+                    <h1>Cloud: <span id="cloud"></span> % <br> 
+                        Precipitation: 0mm <br> 
+                        Dew Point: 3.1&deg;C</h1>
+                    <!-- <small>Any Random Text if needed</small> -->
+                </div>
+                <div>
+                    <h4>Others</h4>
+                    <h1>Humidity: 34% <br> UV Index: 8</h1>
+                    <!-- <small>Any Random Text if needed</small> -->
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- OPENMAP GL LOADING -->
+        <div class="card">
+            <!-- <h1>Titan Farm</h1> -->
+            <div id="map"></div>
+            <div id="menu">
+            <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked">
+            <!-- See a list of Mapbox-hosted public styles at -->
+            <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+            <label for="satellite-streets-v12">Satellite streets</label>
+            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+            <label for="satellite-v9">Satellite</label>
+            <input id="light-v11" type="radio" name="rtoggle" value="light">
+            <label for="light-v11">Light</label>
+            <input id="dark-v11" type="radio" name="rtoggle" value="dark">
+            <label for="dark-v11">Dark</label>
+            <input id="streets-v12" type="radio" name="rtoggle" value="streets">
+            <label for="streets-v12">Streets</label>
+            <input id="outdoors-v12" type="radio" name="rtoggle" value="outdoors">
+            <label for="outdoors-v12">Outdoors</label>
+            </div>
+        </div>
+
+        <!-- <div class="panel list">
+            <li>
+                <h2>Deals</h2>
+                <span>Monthly</span>
+            </li>
+            <li>
+                <h4>Jan</h4>
+                <span>23</span>
+            </li>
+            <li>
+                <h4>Feb</h4>
+                <span>23</span>
+            </li>
+            <li>
+                <h4>Mar</h4>
+                <span>23</span>
+            </li>
+            <li>
+                <h4>Apr</h4>
+                <span>23</span>
+            </li>
+        </div> -->
+
+        <!-- <div class="panel text text-vertical">
+            <h1>Details</h1>
+            <small>lorem ipsum</small>
+            <p>owieywoiewoihwofiwhowifhwoih</p>
+            <p>jdfskjfsafjbfufss s sjsbfksjs fs</p>
+            <p>poiwepqoeiwqpo poipqo powi pweioq pqowi</p>
+            <p>poi poi poi po ip oi po ipo ip oi </p>
+        </div> -->
+
+        <!-- <div class="panel text text-horizontal">
+            <h1>Updates</h1>
+            <small>lorem ipsum</small>
+            <p>owieywoiewoihwofiwhowifhwoih</p>
+            <p>jdfskjfsafjbfufss s sjsbfksjs fs</p>
+        </div> -->
+
+        <!-- <div class="goals">
+            <div class="panel goal">
+                <span class="material-icons">
+                    fingerprint
+                </span>
+                <div>
+                    <div class="goal-title">
+                        <h4>Privacy</h4>
+                    </div>
+                    <small>Any Text if NEEDED</small>
+                </div>
+            </div>
+            <div class="panel goal">
+                <span class="material-icons">
+                    dashboard
+                </span>
+                <div>
+                    <div class="goal-title">
+                        <h4>Dashboard</h4>
+                    </div>
+                    <small>Any Text if NEEDED</small>
+                </div>
+            </div>
+            <div class="panel goal">
+                <span class="material-icons">
+                    manage_accounts
+                </span>
+                <div>
+                    <div class="goal-title">
+                        <h4>Manage</h4>
+                    </div>
+                    <small>Any Text if NEEDED</small>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+
+    <!-- HELLO TO THE NEW USER -->
+    <div>
+        <!-- <span id="user" class="message">Hello, < email-id ></Email-id></span> -->
+        <div class="success"><span>You are successfully loged in!!!</span></div><br/>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+
+    <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="map.js"></script>
+    <script src="home.js"></script>
+    <script type="module" src="agro.js"></script>
+    <script type="module" src="currentweather.js"></script>
+</body>
+</html>
