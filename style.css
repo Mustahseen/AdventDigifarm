@@ -43,7 +43,7 @@ body {
 header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
     width: 100%;
     padding: 2rem 9%;
     background: transparent;
